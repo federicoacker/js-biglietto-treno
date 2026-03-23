@@ -10,10 +10,13 @@ let isKilometersValid = false; // Flag usata in seguito per validazione dell'inp
 let isAgeValid = false; // Flag usata in seguito per validazione dell'input
 
 const kilometers = Number(prompt("Quanti chilometri vuoi viaggiare?"));
+
 //Operatore ternario, controlla se kilometers è NaN o kilometers è <= 0, in quel caso da errore, altrimenti setta isKilometersValid a true
 (isNaN(kilometers) || kilometers <= 0) ? console.error("Il valore inserito per i chilometri non è valido")
 : isKilometersValid = true;
+
 const age = Number(prompt("Quanti anni hai"));
+
 //Operatore ternario, controlla se age è NaN o age è <= 0, in quel caso da errore, altrimenti setta isAgeValid a true
 (isNaN(age) || age <= 0) ? console.error("Il valore inserito per l'età non è valido")
 : isAgeValid = true;
