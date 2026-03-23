@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Biglietto-Treno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-lg">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+                <div class="card">
+                    <img src="imgs/immagineTrenitalia.png" class="card-img-top" alt="immagine trenitalia">
+                    <div class="card-body">
+                        <h5 class="card-title">Compra il tuo biglietto</h5>
+                        <p class="card-text">Inserisci quanti chilometri hai intenzione di viaggiare con noi e la tua età</p>
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="inputKm" class="form-label">Numero di Chilometri</label>
+                                <input type="number" class="form-control" id="inputKm"
+                                    aria-describedby="inuptKmHelp">
+                                <div id="emailHelp" class="form-text">Inserisci quanti chilometri vuoi viaggiare.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputAge" class="form-label">Età</label>
+                                <input type="number" class="form-control" id="inputAge" aria-describedby="inputAgeHelp">
+                                <div id="inputAgeHelp" class="form-text">Inserisci la tua età.
+                            </div>
+                            <button type="submit" class="btn btn-primary my-3">Invia</button>
+                        </form>
+                    <div>
+                        <h6>Prezzo Totale: </h6>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
