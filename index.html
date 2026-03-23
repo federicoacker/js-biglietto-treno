@@ -18,20 +18,20 @@
                     <div class="card-body">
                         <h5 class="card-title">Compra il tuo biglietto</h5>
                         <p class="card-text">Inserisci quanti chilometri hai intenzione di viaggiare con noi e la tua età</p>
-                        <form id="formTreno" action="">
+                        <form id="formTreno">
                             <div class="mb-3">
                                 <label for="inputKm" class="form-label">Numero di Chilometri</label>
-                                <input type="number" class="form-control" id="inputKm"
+                                <input type="text" class="form-control" id="inputKm"
                                     aria-describedby="inuptKmHelp">
                                 <div id="emailHelp" class="form-text">Inserisci quanti chilometri vuoi viaggiare.
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="inputAge" class="form-label">Età</label>
-                                <input type="number" class="form-control" id="inputAge" aria-describedby="inputAgeHelp">
+                                <input type="text" class="form-control" id="inputAge" aria-describedby="inputAgeHelp">
                                 <div id="inputAgeHelp" class="form-text">Inserisci la tua età.
                             </div>
-                            <button type="submit" class="btn btn-primary my-3">Invia</button>
+                            <button type="button" class="btn btn-primary my-3" onclick="buttonClick()">Invia</button>
                         </form>
                     <div>
                         <h6>Prezzo Totale: </h6>
