@@ -13,13 +13,12 @@ let age = prompt("Quanti anni hai?");
 age = parseInt(age);
 
 // Se kilometers e age non sono NaN E nessuno dei due è minore o uguale a 0 allora procediamo coi calcoli
-if(!(isNaN(kilometers) || isNaN(age)) && !((kilometers <= 0) || (age <= 0))){
-    
+if (!(isNaN(kilometers) || isNaN(age)) && !((kilometers <= 0) || (age <= 0))) {
     finalPrice = basePriceKm * kilometers
-    if(age < minorAge){
+    if (age < minorAge) {
         finalPrice -= finalPrice * minorSale;
     }
-    else if (age >= seniorAge){
+    else if (age >= seniorAge) {
         finalPrice -= finalPrice * seniorSale;
     }
     console.log(`${finalPrice.toFixed(2)}`);
