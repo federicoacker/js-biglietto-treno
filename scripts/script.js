@@ -5,15 +5,21 @@ const seniorSale = 0.4; // Sconto moltiplicativo da applicare se sei un senior
 const minorAge = 18; // Soglia di età per essere considerato minorenne
 const seniorAge = 65; // Soglia di età per essere considerato senior
 
-// DICHIARAZIONE VARIABILI E PROMPT DI RICHIESTA ALL'UTENTE //
+// DICHIARAZIONE VARIABILI E PROMPT DI RICHIESTA ALL'UTENTE CON OPERATORE TERNARIO PER VALIDARE I DATI //
+let isKilometersValid = false;
+let isAgeValid = false;
 
-let kilometers = prompt("Quanti chilometri vuoi viaggiare?");
-kilometers = parseFloat(kilometers);
-let age = prompt("Quanti anni hai?");
-age = parseInt(age);
+const kilometers = Number(prompt("Quanti chilometri vuoi viaggiare?"));
+//Operatore ternario, controlla se kilometers è NaN o kilometers è <= 0, in quel caso da errore, altrimenti setta isKilometersValid a true
+(isNaN(kilometers) || kilometers <= 0) ? console.error("Il valore inserito per i chilometri non è valido")
+: isKilometersValid = true;
+const age = Number(prompt("Quanti anni hai"));
+//Operatore ternario, controlla se age è NaN o age è <= 0, in quel caso da errore, altrimenti setta isAgeValid a true
+(isNaN(age) || age <= 0) ? console.error("Il valore inserito per l'età non è valido")
+: isAgeValid = true;
 
-// Se kilometers e age non sono NaN E nessuno dei due è minore o uguale a 0 allora procediamo coi calcoli
-if (!(isNaN(kilometers) || isNaN(age)) && !((kilometers <= 0) || (age <= 0))) {
+//Avendo usato delle flag booleane per controllare la validità dei dati inseriti, il controllo è più semplice da scrivere;
+if(isAgeValid && isKilometersValid){
     finalPrice = basePriceKm * kilometers
     if (age < minorAge) {
         finalPrice -= finalPrice * minorSale;
@@ -21,9 +27,8 @@ if (!(isNaN(kilometers) || isNaN(age)) && !((kilometers <= 0) || (age <= 0))) {
     else if (age >= seniorAge) {
         finalPrice -= finalPrice * seniorSale;
     }
-    console.log(`${finalPrice.toFixed(2)}`);
+    console.log(`Il prezzo del biglietto è di ${finalPrice.toFixed(2)} Euro`);
 }
-// Altrimenti, diamo errore
 else {
-    console.log("I Chilometri o l'età che hai inserito non sono validi");
+    console.log("Esecuzione interrotta perché uno o più valori non erano validi");
 }
