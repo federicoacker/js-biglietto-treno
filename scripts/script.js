@@ -12,13 +12,9 @@ kilometers = parseFloat(kilometers);
 let age = prompt("Quanti anni hai?");
 age = parseInt(age);
 
-// Prima condizione, controlliamo se i chilometri inseriti o l'età inserita sono NaN o se uno dei due è <= 0 
-if((isNaN(kilometers) || isNaN(age)) || (kilometers <= 0) || (age <= 0)){
-    console.log("I Chilometri o l'età che hai inserito non sono validi");
-}
-// Altrimenti, proseguiamo controllando se l'età inserita ci da diritto ad uno sconto e calcoliamo il valore del prezzo finale, 
-// infine lo mostriamo in console
-else {
+// Se kilometers e age non sono NaN E nessuno dei due è minore o uguale a 0 allora procediamo coi calcoli
+if(!(isNaN(kilometers) || isNaN(age)) && !((kilometers <= 0) || (age <= 0))){
+    
     finalPrice = basePriceKm * kilometers
     if(age < minorAge){
         finalPrice -= finalPrice * minorSale;
@@ -27,4 +23,8 @@ else {
         finalPrice -= finalPrice * seniorSale;
     }
     console.log(`${finalPrice.toFixed(2)}`);
+}
+// Altrimenti, diamo errore
+else {
+    console.log("I Chilometri o l'età che hai inserito non sono validi");
 }
