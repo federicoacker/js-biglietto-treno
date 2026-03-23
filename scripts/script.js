@@ -11,7 +11,7 @@ let kilometers = 0; // Km inseriti dall'utente
 let age = 0; // Età inserta dall'utente
 
 // FUNZIONE, VIENE CHIAMATA QUANDO PREMIAMO IL PULSANTE INVIA NELLA FORM // 
-function buttonClick() {
+function calculatePrice() {
     // Seleziono tutti i field input nella mia form, questi vengono salvati in una nodelist,
     // so che indice 0 ho i chilometri e indice 1 ho l'età per come ho fatto la form
     const trainFormInputs = document.querySelectorAll('#formTreno input');
