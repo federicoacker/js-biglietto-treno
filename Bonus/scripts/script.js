@@ -30,7 +30,10 @@ function calculatePrice() {
         : isAgeValid = true;
 
     if (isAgeValid && isKilometersValid) {
-        //Reset delle flag in caso di utilizzi sequenziali
+        //Reset delle flag in caso di utilizzi sequenziali (utilizzato in questo script e non in 
+        // quello base perché in quello base lo script può essere eseguito una sola volta e poi è 
+        // necessario fare il refresh della pagina, mentre in questo no, quindi se non rimettessimo le flag a false, 
+        // rimarrebbero settate su true a vita)
         isAgeValid = false;
         isKilometersValid = false;
         //Calcolo del prezzo
