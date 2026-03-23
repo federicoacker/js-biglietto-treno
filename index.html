@@ -20,21 +20,21 @@
                         <p class="card-text">Inserisci quanti chilometri hai intenzione di viaggiare con noi e la tua età</p>
                         <form id="formTreno">
                             <div class="mb-3">
-                                <label for="inputKm" class="form-label">Numero di Chilometri</label>
+                                <label for="inputKm" class="form-label" >Numero di Chilometri</label>
                                 <input type="text" class="form-control" id="inputKm"
-                                    aria-describedby="inuptKmHelp">
+                                    aria-describedby="inuptKmHelp" value="0">
                                 <div id="emailHelp" class="form-text">Inserisci quanti chilometri vuoi viaggiare.
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="inputAge" class="form-label">Età</label>
-                                <input type="text" class="form-control" id="inputAge" aria-describedby="inputAgeHelp">
+                                <input type="text" class="form-control" id="inputAge" aria-describedby="inputAgeHelp" value="0">
                                 <div id="inputAgeHelp" class="form-text">Inserisci la tua età.
                             </div>
                             <button type="button" class="btn btn-primary my-3" onclick="buttonClick()">Invia</button>
                         </form>
                     <div>
-                        <h6>Prezzo Totale: </h6>
+                        <h6 id="prezzoTotale">Prezzo Totale: </h6>
                     </div>
                     </div>
                 </div>
