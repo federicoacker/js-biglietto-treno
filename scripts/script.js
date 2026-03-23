@@ -7,10 +7,24 @@ const seniorAge = 65; // Soglia di età per essere considerato senior
 
 // DICHIARAZIONE VARIABILI E PROMPT DI RICHIESTA ALL'UTENTE //
 
-const kilometers = prompt ("Quanti chilometri vuoi viaggiare?");
+let kilometers = prompt("Quanti chilometri vuoi viaggiare?");
 kilometers = parseFloat(kilometers);
-
-const age = prompt ("Quanti anni hai?");
+let age = prompt("Quanti anni hai?");
 age = parseInt(age);
 
-
+// Prima condizione, controlliamo se i chilometri inseriti o l'età inserita sono NaN o se uno dei due è <= 0 
+if((isNaN(kilometers) || isNaN(age)) || (kilometers <= 0) || (age <= 0)){
+    console.log("I Chilometri o l'età che hai inserito non sono validi");
+}
+// Altrimenti, proseguiamo controllando se l'età inserita ci da diritto ad uno sconto e calcoliamo il valore del prezzo finale, 
+// infine lo mostriamo in console
+else {
+    finalPrice = basePriceKm * kilometers
+    if(age < minorAge){
+        finalPrice -= finalPrice * minorSale;
+    }
+    else if (age >= seniorAge){
+        finalPrice -= finalPrice * seniorSale;
+    }
+    console.log(`${finalPrice.toFixed(2)}`);
+}
