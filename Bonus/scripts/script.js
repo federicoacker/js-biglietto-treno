@@ -23,19 +23,17 @@ function calculatePrice() {
     kilometers = Number(trainFormInputs[0].value);
     age = Number(trainFormInputs[1].value);
     //Operatore ternario, controlla se kilometers è NaN o kilometers è <= 0, in quel caso da errore, altrimenti setta isKilometersValid a true
-    (isNaN(kilometers) || kilometers <= 0) ? alert("Il valore inserito per i chilometri non è valido")
-        : isKilometersValid = true;
+    isKilometersValid = !(isNaN(kilometers) || kilometers <= 0)
     //Operatore ternario, controlla se age è NaN o age è <= 0, in quel caso da errore, altrimenti setta isAgeValid a true
-    (isNaN(age) || age <= 0) ? alert("Il valore inserito per l'età non è valido")
-        : isAgeValid = true;
+    isAgeValid = !(isNaN(age) || age <= 0);
+    if(!isKilometersValid){
+        alert("Il valore inserito per i chilometri non è valido");
+    }
+    if(!isAgeValid){
+        alert("Il valore inserito per l'età non è valido");
+    }
 
     if (isAgeValid && isKilometersValid) {
-        //Reset delle flag in caso di utilizzi sequenziali (utilizzato in questo script e non in 
-        // quello base perché in quello base lo script può essere eseguito una sola volta e poi è 
-        // necessario fare il refresh della pagina, mentre in questo no, quindi se non rimettessimo le flag a false, 
-        // rimarrebbero settate su true a vita)
-        isAgeValid = false;
-        isKilometersValid = false;
         //Calcolo del prezzo
         finalPrice = basePriceKm * kilometers
         if (age < minorAge) {

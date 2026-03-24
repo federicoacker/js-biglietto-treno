@@ -12,11 +12,11 @@ let finalPrice = 0; // Prezzo finale
 
 const kilometers = Number(prompt("Quanti chilometri vuoi viaggiare?"));
 
-isKilometersValid = (isNaN(kilometers) || kilometers <= 0);
+isKilometersValid = !(isNaN(kilometers) || kilometers <= 0);
 
 const age = Number(prompt("Quanti anni hai"));
 
-isAgeValid = (isNaN(age) || age <=0);
+isAgeValid = !(isNaN(age) || age <=0);
 
 if(!isKilometersValid) { console.error("Il valore inserito per i chilometri non è valido");}
 if(!isAgeValid) { console.error("Il valore inserito per l'età non è valido");}
