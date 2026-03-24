@@ -8,6 +8,7 @@ const seniorAge = 65; // Soglia di età per essere considerato senior
 // DICHIARAZIONE VARIABILI E PROMPT DI RICHIESTA ALL'UTENTE CON OPERATORE TERNARIO PER VALIDARE I DATI //
 let isKilometersValid = false; // Flag usata in seguito per validazione dell'input
 let isAgeValid = false; // Flag usata in seguito per validazione dell'input
+let finalPrice = 0; // Prezzo finale
 
 const kilometers = Number(prompt("Quanti chilometri vuoi viaggiare?"));
 
